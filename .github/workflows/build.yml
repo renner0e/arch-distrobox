@@ -136,7 +136,7 @@ jobs:
           username: ${{ env.REGISTRY_USER }}
           password: ${{ env.REGISTRY_PASSWORD }}
           extra-args: |
-            --disable-content-trust
+            --disable-content-trust --compression-format=zstd:chunked
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
         if: github.event_name != 'pull_request'
