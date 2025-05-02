@@ -82,7 +82,6 @@ RUN pacman -S jdk-openjdk --noconfirm && pacman -S --clean --clean --noconfirm
 # My Own custom packages I need
 RUN pacman -S \
       android-tools \
-      btop \
       curl \
       dos2unix \
       fzf \
@@ -110,7 +109,6 @@ RUN pacman -S \
       wl-clipboard \
       xorg-xev \
       xorg-xkill \
-      yt-dlp \
       zsh \
       zsh-autosuggestions \
       zsh-completions \
@@ -128,6 +126,7 @@ RUN git clone https://aur.archlinux.org/paru-bin.git --single-branch && \
     rm -drf paru-bin && \
     paru -S \
         aur/nexusmods-app-bin \
+        aur/mpd-discord-rpc \
         --noconfirm
 
 USER root
